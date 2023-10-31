@@ -1,5 +1,5 @@
 import Tab from '@app/ui/Tab'
-import Nav from '@app/ui/nav'
+import Nav from '@app/ui/Nav'
 
 
 export default function Homelayout({ children }) {
