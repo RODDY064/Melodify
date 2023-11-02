@@ -23,7 +23,7 @@ export default function Search() {
     <>
       <Link
         href="/browse"
-        className="w-[14rem] flex items-center  max-sm:w-full h-[3.2rem] bg-glass rounded-lg px-1">
+        className="w-[75%] flex items-center  max-sm:w-full h-[3.2rem] bg-glass rounded-lg px-1">
         <span>
           <Image src="/icons/search.svg" width={50} height={50} alt="search" />
         </span>

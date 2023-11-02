@@ -12,4 +12,14 @@ body {
   background-color: var(--background-color);
 }
 
+#slider::-webkit-scrollbar{
+  display: none;
+}
+#slider{
+  scroll-behavior: smooth;
+}
 
+
+.gradient {
+  @apply bg-gradient-to-r from-pink-500/30 via-red-500/30 to-blue-400/30;
+}

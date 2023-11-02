@@ -14,18 +14,19 @@ export default function Logo() {
       <Link href="/" className="w-full">
         <motion.div
           className={clsx(
-            "w-full px-10 py-3 my-2 rounded-lg cursor-pointer hover:bg-glass/70 flex gap-2 justify-center items-center max-sm:justify-start bg-glass/50",
+            "w-full  py-3 my-2 rounded-lg cursor-pointer hover:bg-glass/70 flex gap-2 justify-center items-center max-sm:justify-start bg-glass/50",
             {
-              "bg-gradient-to-r from-pink-500/30 via-red-500/30 to-blue-400/30 ": pathName === "/",
+              "gradient": pathName === "/",
             }
           )}>
-          <span>
+          <span className="max-sm:pl-4">
             <Image
               src="/icons/home.svg"
               width={24}
               height={22}
               priority
               alt="home"
+              className=""
             />
           </span>
           <div className="font-[600] text-xl">Home</div>
