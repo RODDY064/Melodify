@@ -19,7 +19,14 @@ body {
   scroll-behavior: smooth;
 }
 
+#card_box:hover #card_tab {
+  display: flex;
+}
 
 .gradient {
   @apply bg-gradient-to-r from-pink-500/30 via-red-500/30 to-blue-400/30;
 }
+.main {
+  @apply bg-[length:100%_85%] bg-no-repeat
+}
+

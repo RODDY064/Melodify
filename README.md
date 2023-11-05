@@ -1,0 +1,1 @@
+## This project is suspended due some spotify legal agreement

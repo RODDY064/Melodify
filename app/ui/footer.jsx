@@ -30,7 +30,7 @@ const list = [
 
 export default function Footer() {
   return (
-    <div className="w-full h-[600px] p-2 pt-12 mt-10">
+    <div className="w-full h-[600px] max-sm:h-[700px] p-2 pt-12 mt-10">
       <div className="w-full flex justify-between max-sm:block">
         <div className="w-full grid grid-cols-2 grid-rows-1 gap-6">
           {list.map((item, index) => (
@@ -55,8 +55,8 @@ export default function Footer() {
       </div>
       <div className="w-full my-2 text-sm text-black/60">
         <div className="w-full h-[1px] bg-black/30 rounded-lg"></div>
-        <div className="w-full flex justify-between items-baseline my-4">
-          <div className="flex gap-4">
+        <div className="w-full flex justify-between items-baseline my-4 flex-wrap max-sm:gap-2">
+          <div className="flex gap-4 max-sm:gap-1">
             <h3 className="cursor-pointer hover:text-black">Legal</h3>
             <h3 className="cursor-pointer hover:text-black">Privacy</h3>
             <h3 className="cursor-pointer hover:text-black">
@@ -65,7 +65,7 @@ export default function Footer() {
             <h3 className="cursor-pointer hover:text-black">Cookies</h3>
             <h3 className="cursor-pointer hover:text-black">Accessibility</h3>
           </div>
-          <div className="cursor-pointer hover:text-black">&copy; 2023 RODDY</div>
+          <div className="cursor-pointer hover:text-black max-sm:ml-6 ">&copy; 2023 RODDY</div>
         </div>
       </div>
     </div>

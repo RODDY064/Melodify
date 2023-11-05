@@ -1,9 +1,7 @@
 
 
-export default async function Listen() {
- // const data = fetchPlaylist()
-  // await fetchToken()
-
+export default  function Listen() {
+ 
   return (
     <div>page</div>
   )
