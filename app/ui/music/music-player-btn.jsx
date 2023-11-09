@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import { useState } from "react"
 
 export default function MusicPlayerBtn() {
@@ -19,7 +20,9 @@ export default function MusicPlayerBtn() {
   return (
     <div className="w-[55%] h-full mx-4">
     <div className="w-full  my-1 flex gap-2 justify-center items-baseline">
-      <div className="w-12 h-12 rounded-full bg-black cursor-pointer"></div>
+      <div className="w-12 h-12 rounded-full bg-black cursor-pointer flex items-center justify-center">
+        <Image src='/icons/play.svg' width={50} height={50} alt="player"/>
+      </div>
     </div>
    <div className="w-full flex gap-1">
     <h3>0:00</h3>

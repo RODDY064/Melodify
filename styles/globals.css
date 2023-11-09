@@ -22,7 +22,18 @@ body {
 #card_box:hover #card_tab {
   display: flex;
 }
-
+#boxes:hover #small_boxes{
+  opacity: 1;
+}
+#boxes_1:hover #small_boxes_1{
+  opacity: 1;
+}
+#boxes_2:hover #small_boxes_2{
+  opacity: 1;
+}
+#boxes_3:hover #small_boxes_3{
+  opacity: 1;
+}
 .gradient {
   @apply bg-gradient-to-r from-pink-500/30 via-red-500/30 to-blue-400/30;
 }

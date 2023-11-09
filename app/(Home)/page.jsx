@@ -1,5 +1,7 @@
 import Controls from "@app/ui/controls";
 import Footer from "@app/ui/footer";
+import CardSkeleton from "@app/ui/home/animation/cardSkeleton";
+import PlaylistAlbumSkeleton from "@app/ui/home/animation/playlistAlbumSkeleton";
 import BestSongs from "@app/ui/home/best-songs";
 import Chart from "@app/ui/home/chart";
 import MoreLike from "@app/ui/home/more-like";
@@ -14,16 +16,16 @@ export default function Home() {
       <Controls />
       <h1 className="font-[600] text-3xl mt-5">Enjoy</h1>
       <div className="w-full bg-black/50 h-[1px] my-2 rounded-lg"></div>
-      <Suspense fallback={<><h1>loading...</h1></>}>
-      {
-      /* <NewRelease /> */
-      }
+      <Suspense fallback={<><PlaylistAlbumSkeleton /></>}>
+        <NewRelease />
       </Suspense>
-      <Today />
+      <Suspense fallback={<><CardSkeleton /></>}>
+        <Today />
+      </Suspense>
       <ThrowbackRelease />
-      <BestSongs />
+      {<BestSongs />}
       <MoreLike />
-      <Chart />
+      {/* <Chart /> */}
       <Footer />
     </div>
   );

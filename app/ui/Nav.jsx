@@ -11,7 +11,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Links = [
-  {id:0 , name:'Listen Now', href:'/listen',icons:"/icons/listen.svg"},
   { id: 1, name: "Browse", href: "/browse",icons:'/icons/browse.svg'},
   { id: 2, name: "Playlist", href: "/playlist", icons:'/icons/playlist.svg'},
 ];

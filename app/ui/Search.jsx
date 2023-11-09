@@ -7,7 +7,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 export default function Search() {
   const searchParams = useSearchParams();
   const pathName = usePathname();
-  const { replace } = useRouter();
+  const { replace, } = useRouter();
 
   const handleSearch = (term) => {
     const params = new URLSearchParams(searchParams);

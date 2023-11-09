@@ -1,11 +1,14 @@
 
+import { fetchArtist } from "@app/libs/data";
 import PlaylistMoreLike from "./playlist-more-like";
 
-const card = ["f", "g", "h", "i", "j"];
-export default function MoreLike() {
+
+export default async function MoreLike() {
+
+  const { artists } = await fetchArtist()
   return (
     <>
-    <PlaylistMoreLike card={card} />
+    <PlaylistMoreLike cards={artists} />
     </>
   );
 }

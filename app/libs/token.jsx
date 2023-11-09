@@ -18,7 +18,7 @@ export async function fetchToken() {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: "grant_type=client_credentials",
-      next: {revalidate : 60},
+      cache : 'no-cache',
       
     });
 
@@ -32,3 +32,5 @@ export async function fetchToken() {
     throw new Error("Failed to fetch Token");
   }
 }
+
+

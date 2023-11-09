@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 export default function Tab() {
-  let isLog = false;
+  let isLog = true;
 
   return (
     <div className="absolute z-30 min-h-[3.2rem]  flex items-center justify-center gap-4 rounded-lg bg-cream shadow-2xl  px-2 py-1 right-3 max-sm:hidden">

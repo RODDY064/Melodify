@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const social = [
@@ -13,7 +14,7 @@ export default function Social() {
         <div
           key={index}
           className="w-14 h-14 rounded-full bg-cream shadow-card flex items-center justify-center cursor-pointer">
-          {item.name.charAt(0)}
+          <Image src={item.icon} width={27} height={27} alt="social media "/>
         </div>
       ))}
     </div>

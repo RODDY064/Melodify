@@ -1,15 +1,16 @@
 import Click from "./Click";
 import Image from "next/image";
+import Link from "next/link";
 export default function PlaylistCard({ data }) {
 
    const backgroundImageStyle = {
-    backgroundImage: `${data.images[0]?.url}` || `${data.images[1]?.url}` || '/images/album.jpg'
+    backgroundImage: `${data.images[0]?.url}` || `${data.images[1]?.url}` || ''
   };
   
   
   return (
     <>
-     <div className="w-[50%] max-sm:w-[95%] h-[355px] 2xl:h-[500px] cursor-pointer   flex flex-none  bg-cream rounded-lg  overflow-hidden shadow-card " id="card_box">
+     <Link href={`/album/${data.id}`} className="w-[50%] max-sm:w-[95%] h-[355px] 2xl:h-[500px] cursor-pointer   flex flex-none  bg-cream rounded-lg  overflow-hidden shadow-card " id="card_box">
         <div className="w-full h-full relative  flex items-center justify-center">
           <div className="w-[96%] h-[95%]  absolute rounded-lg z-10 overflow-hidden">
             <Image src={backgroundImageStyle.backgroundImage} fill={true} alt="cover h-[120%] object-contain" />
@@ -18,7 +19,7 @@ export default function PlaylistCard({ data }) {
             <Click word={data.description}/>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 }
