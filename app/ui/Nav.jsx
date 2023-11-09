@@ -38,7 +38,7 @@ export default function Nav() {
           initial={onSmallDevice && isAnimating ? { y: -1000 } : {}}
           animate={`${isAnimating ? "open" : "closed"}`}
           exit="closed"
-          className={`w-[25%]  max-sm:absolute 
+          className={`w-[25%]  max-sm:absolute  z-30
           ${!onSmallDevice ? "max-sm:hidden" : ""}  
           max-sm:h-[500px] max-sm:w-full flex flex-col h-[100%] bg-cream/90 flex-none   shadow-2xl rounded-lg`}
         >
