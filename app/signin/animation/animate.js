@@ -1,7 +1,6 @@
 const sign_animate = {
    open:{
       x:'-100%',
-      opacity:0,
       transition:{
         type:'Spring',
         damping:10,
@@ -12,30 +11,50 @@ const sign_animate = {
    },
    visible:{
     x:'100%',
-    opacity:0,
     transition:{
       type:'Spring',
       damping:10,
       stiffness:70,
       restDelta:0.001,
-      when:'afterChildren'
   }
    },
    closed:{
     x:0,
-    opacity:1,
     transition:{
       type:'Spring',
       damping:10,
       stiffness:70,
       restDelta:0.001,
-      when:'beforeChildren'
     }
    }
 
 
 }
 
+const child_animate = {
+  open:{
+    opacity:0,
+    transition:{
+      type:'Spring',
+      damping:10,
+      stiffness:70,
+      restDelta:0.001,
+  }
+   },
+   closed:{
+    opacity:1,
+    transition:{
+      type:'Spring',
+      damping:10,
+      stiffness:70,
+      restDelta:0.001,
+    }
+   }
+
+}
+
+
 export {
-    sign_animate
+    sign_animate,
+    child_animate
 }

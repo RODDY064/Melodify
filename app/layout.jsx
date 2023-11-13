@@ -1,6 +1,8 @@
 import { Poppins } from "next/font/google";
 import "@styles/globals.css";
 import MusicContextProvider from "./libs/context/musicContext";
+import Provider from "./ui/Provider";
+import ToastProvider from "./ui/ToastProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,7 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <MusicContextProvider>{children}</MusicContextProvider>
+       <Provider>
+        <ToastProvider/>
+       <MusicContextProvider>{children}</MusicContextProvider>
+       </Provider>
       </body>
     </html>
   );
