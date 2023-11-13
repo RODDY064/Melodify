@@ -19,8 +19,7 @@ export async function fetchBrowse(start, num) {
           next: { revalidate: 3000 },
         }
       );
-  
-      console.log("Browse",browse.status);
+
   
       // Delay for 3 seconds
       await new Promise((resolve) => setTimeout(resolve, 3000));

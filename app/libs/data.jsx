@@ -22,7 +22,7 @@ export async function fetchPlaylist(start, num) {
       }
     );
 
-    console.log(playlist.status);
+
 
     // Delay for 3 seconds
     await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -56,7 +56,7 @@ export async function fetchNewReleased(start, num) {
       }
     );
 
-    console.log(albums.status);
+
 
     // Delay for 3 seconds
     await new Promise((resolve) => setTimeout(resolve, 7000));
@@ -99,7 +99,7 @@ export async function fetchArtist() {
       }
     );
 
-    console.log(artist.status);
+ 
 
     // Delay for 3 seconds
     await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -114,44 +114,7 @@ export async function fetchArtist() {
   }
 }
 
-export async function fetchChart() {
-  try {
-    const Token = await fetchToken();
 
-    if (!Token) {
-      throw new Error("Token is not fetched");
-    }
-
-    const chartId = [
-      "37i9dQZEVXbNG2KDcFcKOF",
-      "37i9dQZEVXbMDoHDwVN2tF",
-      "4Yrhyo1vC28QsUcZJghhGK",
-      "256IHlp2kiFqVq9mXD2aH0",
-      "37i9dQZF1DX2sQHbtx0sdt",
-    ];
-
-    const chart = await fetch(`id=${chartId}`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${Token.access_token}`,
-      },
-      next: { revalidate: 3000 },
-    });
-
-    console.log(" Chart", chart.status);
-
-    // Delay for 3 seconds
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-
-    if (chart.ok) {
-      const response = await chart.json();
-      return response;
-    }
-  } catch (error) {
-    console.error(error);
-    throw new Error("Failed to fetch Chart");
-  }
-}
 
 //api function to fetch the playlist tracks
 
@@ -193,7 +156,7 @@ export async function fetchTracks() {
       next: { revalidate: 3000 },
     });
 
-    console.log("track", trackItems.status);
+
 
     // Delay for 3 seconds
     await new Promise((resolve) => setTimeout(resolve, 3000));

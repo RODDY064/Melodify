@@ -21,8 +21,6 @@ export async function fetchToken() {
       cache : 'no-cache',
       
     });
-
-    console.log(data.status)
     if (data.ok) {
       const tokenResponse = await data.json();
       return  tokenResponse;
