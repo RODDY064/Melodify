@@ -3,7 +3,6 @@ import Footer from "@app/ui/footer";
 import CardSkeleton from "@app/ui/home/animation/cardSkeleton";
 import PlaylistAlbumSkeleton from "@app/ui/home/animation/playlistAlbumSkeleton";
 import BestSongs from "@app/ui/home/best-songs";
-import Chart from "@app/ui/home/chart";
 import MoreLike from "@app/ui/home/more-like";
 import NewRelease from "@app/ui/home/new-release";
 import ThrowbackRelease from "@app/ui/home/throwback-release";
@@ -25,7 +24,6 @@ export default function Home() {
       <ThrowbackRelease />
       {<BestSongs />}
       <MoreLike />
-      {/* <Chart /> */}
       <Footer />
     </div>
   );

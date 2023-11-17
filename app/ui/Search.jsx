@@ -30,7 +30,7 @@ export default function Search() {
         <input
           placeholder="Search"
           defaultValue={searchParams.get("query")?.toString()}
-          onChange={(e) => handleSearch(e.target.value)}
+          onChange={(e)=>handleSearch(e.target.value)}
           className="w-full h-full p-2 bg-transparent focus:outline-none"
         ></input>
       </Link>

@@ -46,10 +46,16 @@ const handle = NextAuth({
     }),
   ],
   pages:{
-    signIn:'/signin'
+    signIn:'/signin',
+    signOut:'/'
   },
   session:{
     strategy:'jwt'
+  },
+  callbacks:{
+    async session({ session }){
+      return session
+    }
   }
 });
 

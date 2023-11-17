@@ -22,11 +22,6 @@ export async function fetchPlaylist(start, num) {
       }
     );
 
-
-
-    // Delay for 3 seconds
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-
     if (playlist.ok) {
       const response = await playlist.json();
       return response;
@@ -52,14 +47,9 @@ export async function fetchNewReleased(start, num) {
         headers: {
           Authorization: `Bearer ${Token.access_token}`,
         },
-        next: { revalidate: 3000 },
+        next: { revalidate: 3000},
       }
     );
-
-
-
-    // Delay for 3 seconds
-    await new Promise((resolve) => setTimeout(resolve, 7000));
 
     if (albums.ok) {
       const response = await albums.json();
@@ -98,11 +88,6 @@ export async function fetchArtist() {
         next: { revalidate: 3000 },
       }
     );
-
- 
-
-    // Delay for 3 seconds
-    await new Promise((resolve) => setTimeout(resolve, 3000));
 
     if (artist.ok) {
       const response = await artist.json();
@@ -157,10 +142,6 @@ export async function fetchTracks() {
     });
 
 
-
-    // Delay for 3 seconds
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-
     if (trackItems.ok) {
       const response = await trackItems.json();
       return response;
@@ -170,3 +151,4 @@ export async function fetchTracks() {
     throw new Error("fail to fetch tracks");
   }
 }
+

@@ -19,10 +19,6 @@ export async function fetchAlbum(id) {
         }
       );
   
-      console.log(playlist.status);
-  
-      // Delay for 3 seconds
-      await new Promise((resolve) => setTimeout(resolve, 3000));
   
       if (playlist.ok) {
         const response = await playlist.json();

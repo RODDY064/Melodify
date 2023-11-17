@@ -4,7 +4,7 @@ import { fetchPlaylist } from "@app/libs/data";
 
 
 export default async  function Today() {
-  const { playlists } = await fetchPlaylist(8,10)
+  const { playlists } = await fetchPlaylist(11,15)
  
 
   return (
