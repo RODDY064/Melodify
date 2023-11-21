@@ -1,16 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { msTime } from "@app/utils/time";
 
 export default function Song({ track }) {
-  function msTime(duration) {
-    let seconds = Math.floor((duration / 1000) % 60);
-    let minutes = Math.floor(duration / (1000 * 60));
-
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    return minutes + ":" + seconds;
-  }
+ 
 
   return (
     <Link

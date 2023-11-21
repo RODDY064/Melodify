@@ -44,9 +44,9 @@ export default function QueryFetch({ queryData }) {
       </div>
       <div className="w-full my-4">
         {pages.index_1 && (<ByAll query={queryData}/>)}
-        {pages.index_2 && (<BySong/>)}
-        {pages.index_3 && (<ByArtist/>)}
-        {pages.index_4 && (<ByAlbum/>)}
+        {pages.index_2 && (<BySong query={queryData}/>)}
+        {pages.index_3 && (<ByArtist query={queryData}/>)}
+        {pages.index_4 && (<ByAlbum query={queryData}/>)}
       </div>
     </>
   );

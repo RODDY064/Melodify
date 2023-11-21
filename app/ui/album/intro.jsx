@@ -1,4 +1,6 @@
-export default function Intro({ name, desc, total, followers }) {
+import Preview from "./preview";
+
+export default function Intro({ name, desc, total, followers , prev }) {
   function removeHtmlTags(input) {
     return input.replace(/<[^>]*>/g, "");
   }
@@ -16,9 +18,7 @@ export default function Intro({ name, desc, total, followers }) {
           <li className="hover:underline underline-offset-2">{followers.total} <span>Followers</span></li>
         </div>
       </div>
-      <button className="w-24 h-10 bg-cream rounded-lg shadow-card cursor-pointer p-2 mt-4">
-        Preview
-      </button>
+      <Preview prev={prev}/>
     </div>
   );
 }

@@ -1,4 +1,7 @@
-import 'ldrs/dotSpinner'
+'use client'
+import { dotSpinner } from 'ldrs'
+
+dotSpinner.register()
 
 
 
@@ -9,4 +12,3 @@ export default function ByAllSkeleton() {
     </div>
   );
 }
-

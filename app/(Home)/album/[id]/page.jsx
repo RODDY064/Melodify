@@ -5,7 +5,7 @@ import Song from "@app/ui/album/song";
 import Controls from "@app/ui/controls";
 import Footer from "@app/ui/footer";
 
-const song = [1, 2, 3, 4, 7, 8, 9, 0, 6, 7];
+
 export default async function Album({ params }) {
   const playlist = await fetchAlbum(params.id)
    
@@ -16,7 +16,7 @@ export default async function Album({ params }) {
       <div className="w-full py-4">
         <div className="w-full flex gap-6 items-end max-sm:flex-col max-sm:items-center px-2">
           <Cover  image={playlist.images[0].url}/>
-          <Intro  name={playlist.name} desc={playlist.description}  followers={playlist.followers} total={playlist.tracks.total}/>
+          <Intro  name={playlist.name} desc={playlist.description}  followers={playlist.followers} total={playlist.tracks.total} prev={playlist.tracks.items}/>
         </div>
       </div>
       <div className="w-full my-12 p-4 max-sm:px-0">

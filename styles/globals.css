@@ -34,6 +34,19 @@ body {
 #boxes_3:hover #small_boxes_3{
   opacity: 1;
 }
+
+#player{
+  -webkit-appearance: none;
+}
+
+#player::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border:5px solid #9f0d7fe7;
+  background: #f6f6f6;
+}
 .gradient {
   @apply bg-gradient-to-r from-pink-500/30 via-red-500/30 to-blue-400/30;
 }

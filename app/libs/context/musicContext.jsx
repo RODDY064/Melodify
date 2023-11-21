@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from "react"
 const musicContext = createContext(null)
 
 export default function MusicContextProvider( { children }) {
-  const [music , setMusic] = useState(['music'])
+  const [music , setMusic] = useState(null)
 
   return (
     <musicContext.Provider value={{ music , setMusic}}>

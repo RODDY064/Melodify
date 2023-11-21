@@ -29,9 +29,9 @@ export default function Search({ categories }) {
           <h1 className="font-[600] text-3xl mt-10">Browse</h1>
           <div className="w-full bg-black/50 h-[1px] my-2 rounded-lg"></div>
           <div className="w-full p-5 grid grid-cols-3 grid-rows-4 gap-4 max-sm:grid-cols-2 max-sm:px-1">
-            {/* categories.items.map((item, index) => (
+            { categories.items.map((item, index) => (
               <Categories key={index} data={item} />
-            )) */}
+            ))}
           </div>
         </>
       ) : (
