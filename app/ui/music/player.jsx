@@ -18,8 +18,8 @@ export default function Player() {
         <Image src={music?.images[0].url || '/images/album.jpg'} fill={true} className="object-cover rounded-lg"/>
       </div>
       <div className="w-24 flex justify-end m-4 flex-col max-sm:hidden">
-        <h3>{music?.name}</h3>
-        <h4 className="text-black/70">{music?.artist}</h4>
+        <h3 className="text-sm font-[600]">{music?.name}</h3>
+        <h4 className="text-black/70 text-[0.7rem]">{music?.artist}</h4>
       </div>
 
         <MusicPlayerBtn audio={music?.preview_url} duration={music?.duration_ms}/>

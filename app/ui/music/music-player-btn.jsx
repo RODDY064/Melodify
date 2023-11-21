@@ -37,7 +37,7 @@ export default function MusicPlayerBtn({ duration, audio, name }) {
   }, [play]);
 
   return (
-    <div className="w-[55%] h-full mx-4">
+    <div className="w-[55%] max-sm:w-[60%] h-full mx-4">
       <div className="w-full my-1 flex gap-2 justify-center items-center">
         <Image src="/icons/backward.svg" width={40} height={40} alt="backward" className="cursor-pointer" />
         <div onClick={handleSong} className="w-12 h-12 rounded-full bg-black cursor-pointer flex items-center justify-center">
