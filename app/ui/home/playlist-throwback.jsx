@@ -26,6 +26,7 @@ export default function PlaylistThrowback({ card , link }  ) {
     }
   };
 
+ 
 
   return (
     <div className="w-full px-1 py-2 md:p-2 my-8  overflow-hidden" id="boxes_1">
@@ -38,8 +39,8 @@ export default function PlaylistThrowback({ card , link }  ) {
           <div
             className="w-full flex gap-4 max-sm:gap-2 items-center flex-none p-2 overflow-x-auto"
             id="slider" ref={sliderRef}>
-            {card.items.map((item, index) => (
-              <Card key={index} data={item} link={true} />
+            {card.items.map((item) => (
+              <Card key={item.id} data={item} link={true} />
             ))}
           </div>
         </div>

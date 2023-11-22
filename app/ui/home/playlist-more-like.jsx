@@ -41,8 +41,8 @@ export default function PlaylistMoreLike({ cards }) {
             className="w-full flex gap-4 max-sm:gap-2 items-center flex-none p-2 overflow-x-auto"
             id="slider"
             ref={sliderRef}>
-            {cards.map((item, index) => (
-              <ArtistCard key={index} data={item}/>
+            {cards.map((item) => (
+              <ArtistCard key={item.id} data={item}/>
             ))}
           </div>
         </div>

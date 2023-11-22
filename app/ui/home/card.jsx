@@ -6,6 +6,18 @@ export default function Card({ data , link}) {
     backgroundImage: `${data.images[0]?.url}` || `${data.images[1]?.url}` || "",
   };
 
+
+  function shortenSentence(sentence){
+    const words = sentence.split(' ');
+  
+    if (words.length > 5) {
+      return words.slice(0, 4).join(' ') + '...';
+    } else {
+      return sentence;
+    }
+  }
+
+
   return (
     <>
       <Link
@@ -24,8 +36,10 @@ export default function Card({ data , link}) {
           </div>
         </div>
         <div className="w-full min-h-[80px] flex justify-end bg-ice rounded-tl-2xl rounded-tr-2xl rounded-lg">
-          <div className="w-full p-2 ">{data.name}</div>
-          <div className="px-4 py-1 overflow-hidden">
+          <div className="p-2 ">
+            <h2 className="max-sm:text-sm">{shortenSentence(data.name)}</h2>
+          </div>
+          <div className="px-4 py-1 overflow-hidden flex-none">
             <div className="w-8 h-8 bg-cream rounded-full mb-2 flex items-center justify-center cursor-pointer overflow-hidden hover:bg-black">
               <Image src="/icons/play.svg" alt="play" width={26} height={26} />
             </div>

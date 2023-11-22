@@ -1,6 +1,4 @@
 import { fetchBrowse } from "@app/libs/browse-api";
-import { fetchAlbums } from "@app/libs/data";
-import Categories from "@app/ui/browse/categories";
 import Search from "@app/ui/browse/search";
 import Controls from "@app/ui/controls";
 import Footer from "@app/ui/footer";

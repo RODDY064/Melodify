@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Click({ word }) {
   return (
     <div className="w-full hidden  justify-between h-[100px] rounded-tr-2xl rounded-tl-2xl rounded-lg backdrop-blur-lg bg-ice/30 p-4" id='card_tab'>
-      <h2 className="text-black/70  font-medium hover:text-black mr-4">
+      <h2 className="text-black/70 max-sm:text-sm font-medium hover:text-black mr-4">
         {extractPrecedingSentence(word,"Cover")}
       </h2>
       <div className="w-24">

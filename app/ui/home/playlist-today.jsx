@@ -40,8 +40,8 @@ export default function PlaylistToday({ card }) {
             id="slider"
             ref={sliderRef}
           >
-            {card.items.map((item, index) => (
-              <Card key={index} data={item} link={false} />
+            {card.items.map((item) => (
+              <Card key={item.id} data={item} link={false} />
             ))}
           </div>
         </div>
